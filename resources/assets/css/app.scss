@@ -1,0 +1,159 @@
+* {
+    background-color: #f6f6f6;
+}
+
+.welcome-site {
+    position: relative;
+    .logo-site {
+        border-radius: 48px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        left: 0;
+        z-index: 1;
+        margin: 0 auto;
+        width: 300px;
+        height: 70px;
+
+        @media (min-width: 992px) {
+            width: 250px;
+            top: 47px;
+            border-radius: 0 0 48px 48px;
+            width: 359px;
+            height: 95px;
+        }
+
+        img {
+            width: 200px;
+
+            @media (min-width: 992px) {
+                width: 250px;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .bg-mitsubshi {
+            background-image: url("../../../public/images/mitsubshi.png");
+            border-left: 3px solid #fff;
+            border-top: 0;
+            transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+
+            .img-only {
+                display: none;
+            }
+
+            &:hover {
+                background-image: linear-gradient(rgba(142, 36, 39, 0.44), rgba(142, 36, 39, 0.44)), url("../../../public/images/mitsubshi.png");
+                transition: all 0.4s ease;
+                -webkit-transition: all 0.4s ease;
+                .link div {
+                    transition: 0.5s;
+                    bottom: 35%;
+                }
+            }
+        }
+
+        .bg-fiat {
+            background-image: url("../../../public/images/fiat.png");
+            border-right: 2px solid #fff;
+            border-bottom: 0;
+
+            .img-only {
+                display: none;
+            }
+
+            &:hover {
+                background-image: linear-gradient(rgba(37, 37, 37, 0.53), rgba(37, 37, 37, 0.53)), url("../../../public/images/fiat.png");
+                transition: 0.5s;
+                -webkit-transition-delay: 0.5s;
+
+                .link div {
+                    transition: 0.5s;
+                    bottom: 35%;
+                }
+            }
+        }
+    }
+
+    .link {
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            @media (min-width: 992px) {
+                width: 416px;
+                position: fixed;
+                bottom: 14%;
+            }
+            a {
+                font-size: 20px;
+                padding: 10px 11px;
+                text-align: center;
+                width: 100%;
+
+                img {
+                    padding-left: 14px;
+                    margin-top: -2px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 14px;
+                }
+                @media (min-width: 401px) and (max-width: 475px) {
+                    font-size: 15px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .bg-site {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        @media (min-width: 992px) {
+            min-height: 70vh;
+        }
+
+        // .logo-princial {
+        //     margin-bottom: 30px;
+        // }
+
+        .btn-mitsubshi {
+            background-color: #d42322;
+            color: #fff;
+            strong,
+            img {
+                background-color: #d42322;
+            }
+        }
+
+        .btn-fiat {
+            color: #373737;
+            strong {
+                color: #e11251;
+            }
+        }
+        @media (max-width: 575px) {
+            .d-none.d-sm-flex {
+                display: none !important;
+            }
+        }
+
+        .bg-marca {
+            @media (min-width: 992px) {
+                width: 49.87%;
+                bottom: 0;
+                position: fixed;
+            }
+        }
+    }
+}
